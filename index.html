@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 8: ¡Desarrollo Feature Adicional 1!</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            list-style: none;
+            display: block;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
+
+        summary {
+           display: block;
+           list-style: none;
+        }
+        summary::-webkit-details-marker {
+           display: none;
+        }
+
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        }
+
+        window.onload = () => {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 8: ¡Desarrollo Feature Adicional 1!</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 Resumen de Sesión</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Programar la primera característica adicional (Feature 1) planificada en la sesión anterior en Scratch.</li>
+                                <li>Integrar la nueva funcionalidad con el núcleo existente.</li>
+                                <li>Avanzar significativamente en la implementación de la Feature 1.</li>
+                            </ul>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong>
+                            <ul>
+                                <li>Feature 1 programada (o muy avanzada) en el proyecto Scratch.</li>
+                                <li>Integración inicial de la Feature 1 con el núcleo verificada.</li>
+                                <li>Tablero Kanban actualizado reflejando el progreso de las tareas de la Feature 1.</li>
+                            </ul>
+                             <strong>🛠️ Materiales/Preparación:</strong>
+                            <ul>
+                                <li>Dispositivos con acceso a Scratch y los proyectos con núcleo estable y Feature 1 planificada.</li>
+                                <li>Tablero Kanban de cada equipo con tareas de Feature 1 en "Por Hacer" y la primera en "Haciendo".</li>
+                                <li>Acceso al diseño técnico de la Feature 1 y del núcleo.</li>
+                                <li>Proyector o pantalla.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Stand-up Feature 1 -->
+        <div id="activity-1" class="activity">
+             <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🚀 Actividad 1: Stand-up Feature 1 ⏰ Tiempo: 5 minutos</div>
+             </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (1 min):</strong> Iniciar sesión, enfocar en la construcción de la Feature 1.
+                                (<strong>Proyectar Diapositiva 1</strong>: Título "Sesión 8: ¡Desarrollo Feature 1!" y Objetivo: "¡Construir nuestra primera expansión!").
+                            </td>
+                            <td>
+                                "¡Equipos Pro, seguimos expandiendo! Hoy nos dedicamos a construir esa Feature 1 que planificamos. ¡Es hora de añadir nuevas funcionalidades a nuestro proyecto!"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (4 min):</strong> Check-in Kanban rápido sobre las tareas de la Feature 1 en "Haciendo".
+                                (<strong>Proyectar Diapositiva 2</strong>: Visual del Kanban resaltando la tarea de Feature 1 en 'Haciendo'. Pregunta: "¿Qué tarea de la Feature 1 empezamos hoy? ¿Algún desafío previsto?").
+                            </td>
+                            <td>
+                                "Rápido vistazo a sus Kanbans. ¿Qué tarea específica de la Feature 1 tienen en la columna 'Haciendo (⚙️)' para empezar hoy?"
+                                <br><br>
+                                "Programadores/as, ¿tienen claro el objetivo de esa tarea? ¿Anticipan algún bloque o lógica de Scratch que pueda ser un pequeño desafío?"
+                                <br><br>
+                                <em>(Facilitar que cada equipo confirme la tarea inicial de la Feature 1 y comparta brevemente si prevé alguna dificultad).</em>
+                                <br><br>
+                                "¡Perfecto! Todos listos para programar la expansión. ¡Adelante!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: ¡Creando Novedades! Construcción Feature 1 -->
+        <div id="activity-2" class="activity">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                 <div class="title">✨ Actividad 2: ¡Creando Novedades! Construcción Feature 1 ⏰ Tiempo: 30 minutos</div>
+             </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (30 min - Bloque Principal):</strong> Equipos programan la nueva característica (Feature 1). Facilitador circula, apoya la implementación y la integración con el núcleo. Roles interactúan.
+                                (<strong>Proyectar Diapositiva 3</strong>: Título "¡Construyendo la Feature 1!". Iconos: Bloques de código añadiéndose 🧱➕, Engranajes conectándose al núcleo ⚙️🔗❤️, Roles Pro colaborando 🧑‍💻🧐🎮).
+                            </td>
+                            <td>
+                                "¡Manos a la obra con la Feature 1! Tienen 30 minutos para programar esta nueva funcionalidad."
+                                <br><br>
+                                "<strong>Programadores/as:</strong> ¡A implementar la lógica y el código para la Feature 1! Sigan el diseño técnico que hicieron."
+                                <br><br>
+                                "<strong>Testers:</strong> En cuanto haya algo funcional de la Feature 1, ¡pruébenlo! Verifiquen que hace lo esperado y, muy importante, ¡prueben que no rompe nada del núcleo que ya funcionaba! Prueben la integración."
+                                <br><br>
+                                "<strong>Arquitectos/as:</strong> ¡Supervisen la implementación! Asegúrense de que la feature se integra correctamente con el núcleo. Ayuden a resolver problemas de lógica o de conexión entre la feature y el código existente."
+                                <br><br>
+                                "¡Colaboración clave para que esta nueva pieza encaje perfectamente!"
+                                <br><br>
+                                <em>(Circular activamente. Poner énfasis en la integración: "¿Cómo se asegura esta feature de no interferir con X?", "¿Qué mensaje necesita enviar/recibir del núcleo?". Ayudar con la lógica de la nueva funcionalidad y su conexión).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (Integrado en los 30 min):</strong> Guiar movimiento de tareas de la Feature 1 en Kanban (Haciendo -> Listo para Probar -> ¡Listo! / o de vuelta).
+                                (<strong>Proyectar Diapositiva 4</strong>: Recordatorio visual Flujo Kanban aplicado a tareas de Feature 1: ⚙️ -> 🔬 -> ✅ / 🔬 -> ⚙️ + 📝🐞).
+                            </td>
+                            <td>
+                                <em>(Recordar el flujo Kanban durante el desarrollo de la feature):</em>
+                                <br>
+                                "¡No olviden el Kanban mientras desarrollan la Feature 1!"
+                                <br><br>
+                                "Cuando una tarea de la feature esté lista para una revisión inicial, ¡muévanla a 'Listo para Probar (🔬)'!"
+                                <br><br>
+                                "Si el Tester la prueba (incluyendo su integración con el núcleo) y funciona bien, ¡a '¡Listo! (✅)'!"
+                                <br><br>
+                                "Si hay bugs (en la feature misma o en cómo afecta al núcleo), ¡la tarea vuelve a 'Haciendo (⚙️)' con notas claras para la corrección!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Cierre Rápido -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">⏱️ Actividad 3: Cierre Rápido ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (3 min):</strong> Actualizar Kanban. Preguntar por el progreso en la Feature 1.
+                            </td>
+                            <td>
+                                "¡Tiempo, Equipos Pro! Última actualización del Kanban de hoy."
+                                <br><br>
+                                "Revisen dónde quedaron las tareas de la Feature 1. ¿Cuánto lograron avanzar en su implementación hoy?"
+                                <br><br>
+                                <em>(Facilitar una breve puesta en común sobre el progreso general de la Feature 1 en cada equipo).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (2 min):</strong> Cerrar sesión. Recordar guardar. Anticipar próxima sesión (Calidad Feature 1).
+                                (<strong>Proyectar Diapositiva 5</strong>: Mensaje "¡Feature 1 en Desarrollo! 🏗️ Guardar. Próxima parada: ¡Calidad Feature 1! 🧐").
+                            </td>
+                            <td>
+                                "¡Excelente trabajo iniciando o avanzando con la Feature 1 hoy!"
+                                <br><br>
+                                "¡Fundamental GUARDAR todo su progreso!"
+                                <br><br>
+                                "En la próxima sesión, nos enfocaremos en la calidad de esta nueva feature y su integración. ¡Haremos pruebas específicas para asegurarnos de que funciona bien y no afecta negativamente al resto del proyecto!"
+                                <br><br>
+                                "¡Nos vemos en la Sesión 9 para las pruebas de calidad de la Feature 1!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
